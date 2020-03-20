@@ -1,12 +1,37 @@
-<h1 mat-dialog-title>Hi {{data.name}}</h1>
+<h1 mat-dialog-title>Dados do Veiculo</h1>
 <div mat-dialog-content>
-  <p>What's your favorite animal?</p>
-  <mat-form-field>
-    <mat-label>Favorite Animal</mat-label>
-    <input matInput [(ngModel)]="data.modelo">
-  </mat-form-field>
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field>
+          <mat-label>Placa do carro</mat-label>
+          <input matInput [(ngModel)]="data.modelo">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <mat-label>Modelo</mat-label>
+          <input matInput [(ngModel)]="data.placa">
+        </mat-form-field>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-form-field>
+          <mat-label>Data e Hora da Entrada</mat-label>
+          <input matInput [(ngModel)]="data.modelo">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <mat-label>Data e Hora da Saída</mat-label>
+          <input matInput [(ngModel)]="data.placa">
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.placa" cdkFocusInitial>Ok</button>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="data.placa" cdkFocusInitial>Salvar</button>
 </div>
