@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'electron-angular';
+  title = 'Controle de Estacionamento';
 
 }

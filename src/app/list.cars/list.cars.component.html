@@ -1,9 +1,20 @@
-<mat-form-field>
-  <mat-label>Filter</mat-label>
-  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia">
-</mat-form-field>
+<div class="mat-elevation-z8 data-table">
 
-<div class="mat-elevation-z8">
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <button mat-raised-button (click)="openDialog()">Pick one</button>
+      </td>
+      <td>
+        <mat-form-field>
+          <mat-label>Filter</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia">
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+
+
   <table mat-table [dataSource]="dataSource" matSort>
 
     <!-- ID Column -->
